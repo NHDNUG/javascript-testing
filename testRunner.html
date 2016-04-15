@@ -1,0 +1,16 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <link href="node_modules/mocha/mocha.css" rel="stylesheet" type="text/css"></link>
+</head>
+<body>
+<div id="mocha"></div>
+    <script src="node_modules/mocha/mocha.js"></script>
+    <script>
+        mocha.ui( 'bdd' );
+        mocha.reporter( 'html' );
+    </script>
+
+<script src="node_modules/requirejs/require.js" data-main="test.config.js"></script>
+        </body>
+</html>
