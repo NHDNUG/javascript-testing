@@ -1,7 +1,6 @@
-var testProjectPath =  "";
+
 require.config( {
 
-  deps: [testProjectPath + 'main'],
 
   baseUrl: "",
 
@@ -12,28 +11,21 @@ require.config( {
     "underscore" : "node_modules/underscore/underscore",
 
     //Classes Under Test
-    "cart-view-model": "classes/cart-view-model",
+    "full-view-model": "classes/full-view-model",
+    "jquery-view-model": "classes/jquery-using-view-model",
     //Test Framework
 
     "sinon":  "node_modules/sinon/lib/sinon",
     "squire": "node_modules/squirejs/src/squire",
     "should": "node_modules/should/should",
-    "testHelpers": "/testhelpers",
+    "testHelpers": "testhelpers",
     //Tests
 
-    "headerTests": "tests/headerViewModelTests",
+    "fullTests": "tests/fullViewModelTests",
+    "jqueryTests": "tests/jqueryUsingViewModelTests"
 
 
   },
 
-
-
-  shim: {
-    "postal": {
-      deps: ["underscore"],
-      exports: "postal"
-    },
-    
-  }
-
-} );
+} )
+requirejs(['main']);;

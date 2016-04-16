@@ -1,5 +1,6 @@
 require( [
-  'headerTests',
+  'fullTests',
+  'jqueryTests',
   'should',
   'sinon'
 ], function () {
