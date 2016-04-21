@@ -27,7 +27,7 @@ define([
             self.cartItemCount(count.Data);
           }
         ).fail(function() {
-          self.cartItemCount(0);
+          self.cartItemCount(-1);
         });
       };
 

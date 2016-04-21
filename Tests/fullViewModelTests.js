@@ -59,6 +59,14 @@ define(['squire', 'sinon'], function(Squire, sinon) {
         viewModel.cartItemCount().should.be.exactly(5).and.be.a.Number;
         done();
       })
+
+      it("Should return an error count upon failure from the cart service", function (done){
+        responseData = JSON.stringify("");
+        server.respondWith("/CartService", [500, {"Content-Type": "application/json"}, responseData]);
+        server.respond()
+        viewModel.cartItemCount().should.be.exactly(-1).and.be.a.Number;
+        done();
+      })
     })
   });
 });
